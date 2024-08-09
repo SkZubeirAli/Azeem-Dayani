@@ -1,0 +1,719 @@
+* {
+    border-width: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+p {
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 1.1vw;
+}
+
+.container {
+    padding-left: 0vw !important;
+    padding-right: 0vw !important;
+}
+
+.w-1340 {
+     /* 1340px converted to vw */
+}
+
+.bg_blue {
+    background-color: #218ee3;
+}
+
+.bg_dark_blue {
+    background-color: #3c8aca;
+}
+
+.bg_green {
+    background-color: #59a246 !important;
+}
+
+.font_miedinger{
+    font-family: 'miedinger', sans-serif;
+}
+
+.font_tungsten{
+    font-family: 'tungsten', sans-serif;
+}
+
+.photograph_font{
+    font-family: 'miedinger', sans-serif;
+}
+
+.great_vibe_font {
+    font-family: "Great Vibes", cursive !important;
+}
+
+.fw-500 {
+    font-weight: 500 !important;
+}
+
+.fs-14 {
+    font-size: 0.73vw !important; /* 14px converted to vw */
+}
+
+.fs-24 {
+    font-size: 1.25vw !important; /* 24px converted to vw */
+}
+
+.lh-20 {
+    line-height: 1.04vw !important; /* 20px converted to vw */
+}
+
+.fa {
+    font-family: 'FontAwesome' !important;
+}
+
+.list-group-item {
+    background-color: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    font-size: 1.6vw;
+}
+
+.h_63 {
+    height: 63vw !important;
+}
+
+/* header css open */
+
+.header {
+    position: absolute;
+    z-index: 9999;
+    top: 0vw;
+    right: 0vw;
+    width: 100%;    
+    padding: 1vw 1.9vw;
+}
+
+.header_logo {
+    width: 13vw;
+}
+
+.menu-trigger {
+    display: none;
+}
+
+.overlay {
+    width: 0;
+    height: 0;
+    position: absolute;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 0s linear 6.51ms, height 0s linear 6.51ms; /* 125ms converted to vw */
+    animation: overlay-hide 0.3s ease-out forwards;
+    right: 0vw; /* 0px converted to vw */
+}
+
+.menu-trigger:checked + .overlay {
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+    animation: overlay-mask 0.3s ease-out forwards;
+}
+
+@keyframes overlay-mask {
+    0% {
+        background-image: radial-gradient(circle at calc(100vw - 2.86vw) 2.6vw, rgba(0, 0, 0, 0.5) 0%, transparent 0%); /* 55px and 50px converted to vw */
+    }
+    100% {
+        background-image: radial-gradient(circle at calc(100vw - 2.86vw) 2.6vw, rgba(0, 0, 0, 0.5) 100%, transparent 100%);
+    }
+}
+
+@keyframes overlay-hide {
+    100% {
+        background-image: radial-gradient(circle at calc(100vw - 2.86vw) 2.6vw, rgba(0, 0, 0, 0.5) 0%, transparent 0%);
+    }
+    0% {
+        background-image: radial-gradient(circle at calc(100vw - 2.86vw) 2.6vw, rgba(0, 0, 0, 0.5) 100%, transparent 100%);
+    }
+}
+
+/* Menu links CSS */
+.menu-links {
+    font-size: 4vw;
+    list-style-type: none;
+}
+
+.menu-links li {
+    text-align: center;
+    margin: 1.3vw 0; /* 25px converted to vw */
+    transition: transform 300ms cubic-bezier(0.18, 0.89, 0.32, 1.28); /* 275ms converted to vw */
+}
+
+.menu-links li a {
+    font-family: Montserrat, sans-serif;
+    color: #e2e2e2;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    text-shadow: 0 -0.05vw rgba(0, 0, 0, 0.8), 0 0 0 #ffffff; /* 0px, -1px converted to vw */
+    opacity: 0;
+    transform: translateX(-1.3vw); /* 25px converted to vw */
+    transition: color 9.12ms ease-out, text-shadow 9.12ms ease-out, opacity 9.12ms ease-out, transform 14.32ms cubic-bezier(0.18, 0.89, 0.32, 1.28); /* 175ms, 275ms converted to vw */
+}
+
+.menu-links li:hover {
+    transform: scale(1.2);
+}
+
+.menu-links li:hover a {
+    color: #ffffff;
+    text-shadow: 0 -0.05vw rgba(0, 0, 0, 0.8), 0 0 1.3vw #ffffff; /* 0px, -1px, 25px converted to vw */
+}
+
+.menu-trigger:checked + .overlay .menu-links li a {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.menu-trigger:checked + .overlay .menu-links li:nth-child(1) a {
+  transition: opacity 350ms ease-out 125ms, transform 350ms ease-out 125ms;
+}
+.menu-trigger:checked + .overlay .menu-links li:nth-child(2) a {
+  transition: opacity 350ms ease-out 300ms, transform 350ms ease-out 300ms;
+}
+.menu-trigger:checked + .overlay .menu-links li:nth-child(3) a {
+  transition: opacity 350ms ease-out 475ms, transform 350ms ease-out 475ms;
+}
+.menu-trigger:checked + .overlay .menu-links li:nth-child(4) a {
+  transition: opacity 350ms ease-out 650ms, transform 350ms ease-out 650ms;
+}
+.menu-trigger:checked + .overlay .menu-links li:nth-child(5) a {
+  transition: opacity 350ms ease-out 825ms, transform 350ms ease-out 825ms;
+}
+
+.hamburger-menu {
+    width: 2.6vw; /* 50px converted to vw */
+    height: 2.1vw; /* 30px converted to vw */
+    position: absolute;
+    top: 1.56vw; /* 30px converted to vw */
+    right: 1.56vw; /* 30px converted to vw */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.hamburger-menu span {
+    background-color: #ffffff;
+    width: 2.68vw; /* 40px converted to vw */
+    height: 0.45vw; /* 6px converted to vw */
+    flex-grow: 0;
+    display: block;
+    transition: transform 300ms ease-out; /* 350ms converted to vw */
+    transform-origin: center;
+    border-radius: 10px;
+}
+
+.hamburger-menu span:nth-child(1), .hamburger-menu span:nth-child(3) {
+    width: 2vw; /* 30px converted to vw */
+}
+
+.menu-trigger:checked ~ .hamburger-menu span:nth-child(1) {
+    transform: translateY(0.8vw) rotate(45deg); /* 12px converted to vw */
+}
+
+.menu-trigger:checked ~ .hamburger-menu span:nth-child(2) {
+    transform: scale(1, 0) translateX(-100%);
+}
+
+.menu-trigger:checked ~ .hamburger-menu span:nth-child(3) {
+    transform: translateY(-0.8vw) rotate(-45deg); /* 12px converted to vw */
+}
+
+.music_section {
+    background: url('../images/Homepage/Main-banner.jpg') no-repeat; 
+    background-size: 100%;
+    background-color: #5ea138;
+}
+
+.main_logo {
+    width: 45vw; /* 60% converted to vw */
+}
+
+.header_logo_div {
+    height: 51vw; /* 110vh converted to vw */
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    bottom: 0vw; /* 0px converted to vw */
+    z-index: 1;
+    width: 100%;
+}
+
+.music_director {
+    font-size: 3.45vw; /* 47px converted to vw */
+    opacity: 0.4;
+    margin: 1rem auto 0.5rem;
+}
+
+.wavylines_white {
+    width: 35vw; /* 45% converted to vw */
+}
+
+.headphone_text_img {
+    width: 70vw; /* 70% converted to vw */
+    margin-top: 1em;
+}
+
+.zip_zap_bg_img {
+    background: url('../images/Homepage/Object_2.png') no-repeat center top;
+    background-size: 75vw; /* 80% converted to vw */
+    margin-top: 7.29vw; /* 110px converted to vw */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description {
+    font-size: 1.3vw;
+    line-height: 1.5;
+    padding: 1.04vw 0vw 1.04vw; /* 20px converted to vw */
+}
+
+.section-bg {
+    background-color: #5aa236; /* Change to desired green background color */
+    padding: 0vw 0;
+}
+
+.section-heading {
+    font-family: 'photograph', cursive;
+    font-size: 3rem;
+    color: white;
+    margin-top: 1.04vw; /* 20px converted to vw */
+    text-transform: capitalize;
+}
+
+.view-more {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.sooryavanshi_divs {
+    gap: 3.13vw; /* 6rem converted to vw */
+}
+
+.sooryavanshi_img {
+    width: 60vw;
+}
+
+.middle_description img {
+    position: relative;
+    z-index: 9;
+}
+
+.middle_description {
+    background: url('../images/Homepage/Middle-image.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right top;
+    padding-bottom: 9vw; /* 300px converted to vw */
+    position: relative;
+}
+
+.middle_description:before {
+    content: "";
+    position: absolute;
+    /* background-color: skyblue; */
+    z-index: 2;
+    left: 2.4vw;
+    top: 6.8vw;
+    border: 0.05vw solid #fff;
+    height: 78.8vw;
+    width: 79.2vw; /* 1038px converted to vw */
+    border-radius: 100%;
+}
+
+.middle_description:after {
+    content: "";
+    position: absolute;
+    /* background-color: skyblue; */
+    z-index: 2;
+    left: 18.2vw;
+    top: 13.8vw;
+    border: 0.05vw solid #fff;
+    height: 73.4vw;
+    width: 73.4vw; /* 1038px converted to vw */
+    border-radius: 100%;
+}
+
+.middle_description .tshirt_img_div {
+    position: relative;
+    top: 8vw;
+}
+
+.tshirt_img {
+    width: 20vw;
+    position: relative;
+    z-index: 4;
+}
+
+.film_section:before {
+    content: "";
+    background: url('../images/Homepage/Music-Lines_3.png');
+    background-size: 20vw;
+    width: 20vw;
+    height: 4vw;
+    display: block;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 0vw;
+    top: -1.8vw;    
+}
+
+.film_section {
+    padding-top: 8vw; /* 6rem converted to vw */
+    position: relative;
+}
+
+.film_music {
+    background: url('../images/Homepage/Object_2.png') no-repeat right center;
+    background-size: 90vw;
+}
+
+.film_images_main_div {
+    right: 3.13vw; /* 6em converted to vw */
+    top: 1.56vw; /* 3em converted to vw */
+    z-index: 999;
+}
+
+.film_list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.film_list li {
+    position: relative;
+    height: 3.5vw; /* 3rem converted to vw */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.film_link {
+    font-size: 2vw;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 0.52vw; /* 10px converted to vw */
+    text-transform: uppercase;
+    transition: color 0.3s, font-size 0.3s;
+    font-family: "miedinger", sans-serif;
+    position: relative;
+    z-index: 9;
+}
+
+.film_link:hover, .film_link:focus {
+    color: #218ee3;
+    font-size: 3.3vw;
+}
+
+.film-images {
+    position: relative;
+}
+
+.film_img {
+    display: none;
+    width: 20vw; /* 280px converted to vw */
+    FONT-WEIGHT: 200;
+    transform: rotate(10deg);
+    position: absolute;
+    top: -6vw; /* 30px converted to vw */
+    right: 10vw; /* 20px converted to vw */
+    z-index: 10;
+}
+
+.film_img.active {
+    display: block;
+}
+
+.non_film_section .film_link {
+    color: #fff;
+}
+
+.playlist_heading_div {
+    transform: rotate(-90deg);
+}
+
+.playlist_heading span {
+    color: #218ee3;
+}
+
+.playlist_heading {
+    position: relative;
+    left: 6.2vw;
+    font-size: 6vw !important;
+    top: 3vw;
+}
+
+.non_film_section{
+    position: relative;
+}
+
+.non_film_music {
+    position: relative;
+    z-index: 3;
+}
+
+.non_film_section:before {
+    content: "";
+    background: url('../images/Homepage/Headphone_2.png') no-repeat left top;
+    width: 20vw;
+    height: 52vw;
+    background-size: 18vw;
+    position: absolute;
+    left: 0;
+    z-index: 999;
+    top: -30vw;
+}
+
+
+.film_section:before {
+    content: "";
+    position: absolute;
+    /* background-color: skyblue; */
+    z-index: 2;
+    left: -2.6vw;
+    top: 44vw;
+    border: 0.05vw solid #fff;
+    height: 78.8vw;
+    width: 79.2vw; /* 1038px converted to vw */
+    border-radius: 100%;
+}
+
+.film_section:after {
+    content: "";
+    position: absolute;
+    /* background-color: skyblue; */
+    z-index: 2;
+    left: 10.2vw;
+    top: 59vw;
+    border: 0.05vw solid #fff;
+    height: 73.4vw;
+    width: 73.4vw; /* 1038px converted to vw */
+    border-radius: 100%;
+}
+
+
+.non_film_section .tshirt_img_div {
+    position: relative;
+    left: 5vw;
+    right: 4vw;
+    bottom: 7vw;
+}
+
+/* home page css close */
+
+
+/* achievements page css open */
+
+.side_text {
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 5vw;
+    right: 4vw;
+    bottom: 8vw;
+}
+
+.side_text h2 {
+    font-size: 10.5vw;
+    transform-origin: center bottom;
+    margin-bottom: 20px;
+    font-family: 'tungsten';
+}
+
+.headphones_icon {
+    width: 15vw;
+    position: absolute;
+    top: 13vw;
+    left: -1vw;
+}
+
+.achievements_section {
+    background: linear-gradient(180deg, #3c8aca 74%, #fff 25%);
+    padding: 6vw 0 0vw;
+    color: white;
+    /* position: relative; */
+}
+
+
+.achievements_section:nth-child(1)::before {
+    content: "";
+    background: url('../images/Achievements/Object.png') no-repeat center center;
+    width: 100%;
+    height: 68vw;
+    background-size: 80vw;
+    position: absolute;
+    z-index: 0;
+}
+
+
+.achievements_section .achievement_card {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    text-align: left;
+    color: #fff;
+}
+
+.music_coomposer .achievement_card, .music_coomposer .achievement_card .card-text {
+    color: #000;
+}
+
+.achievement_card img {
+    border-radius: 1vw;
+}
+
+.achievement_card .card-title {
+    font-family: 'tungsten', sans-serif !important;
+    font-size: 2.7vw;
+}
+
+.achievement_card .card-body {
+    padding: 1vw 0 0;
+}
+
+.col-md-4:last-of-type .card-body .card-text, .col-md-4:last-of-type .card-title,
+.col-md-4:nth-last-of-type(2) .card-body .card-text, .col-md-4:nth-last-of-type(2) .card-title{
+    color: #000; /* Set text color to white */
+}
+
+.achievement_card .card-text {
+    text-align: left;
+}
+
+.collaboration_subtitle {
+    color: #000;
+    font-size: 3vw;
+    line-height: 3vw;
+}
+
+.collaborations_section {
+    background-color: #59a246;
+    color: white;
+    text-align: left;
+    position: relative;
+}
+
+.collaborations_section:before {
+    content: "";
+    position: absolute;
+    /* background-color: skyblue; */
+    z-index: 0;
+    left: 0.4vw;
+    bottom: -3vw;
+    border: 0.05vw solid #fff;
+    height: 78vw;
+    width: 78vw; /* 1038px converted to vw */
+    border-radius: 100%;
+}
+
+.collaborations_section:after {
+    content: "";
+    position: absolute;
+    /* background-color: skyblue; */
+    z-index: 0;
+    left: 22.2vw;
+    bottom: 2vw;
+    border: 0.05vw solid #fff;
+    height: 73.4vw;
+    width: 73.4vw; /* 1038px converted to vw */
+    border-radius: 100%;
+}
+
+.collaborations_section h2 {
+    font-size: 3vw;
+}
+
+.collaboration_highlight {
+    font-size: 3vw;
+    line-height: 3vw;
+    font-family: 'tungsten';
+}
+
+.collaborations_list {
+    padding: 0;
+    font-size: 2vw;
+    margin-bottom: 0;
+    padding-bottom: 2vw;
+    text-align: start;
+    font-family: miedinger;
+}
+
+.collaborations_list li {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.collaborations_section img {
+    max-width: 9vw;
+}
+
+
+/* achievements page css open */
+
+
+
+/* footer css open */
+
+footer {
+    background-color: #218ee3;
+}
+
+.footer_logo {
+    width: 30vw;
+}
+
+.footer_list {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+}
+
+.footer_link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-family: "miedinger" !important;
+    font-size: 1.3vw;
+}
+
+.footer_links_div {
+    padding: 1vw 0px;
+}
+
+.footer_social_links_div {
+    background-image: url('../images/music-lines.png');
+    background-size: contain;
+    background-position: center;
+}
+
+.footer_social_media_icons {
+    padding-bottom: 1.3vw !important; /* 25px converted to vw */
+}
+
+.social_media_links {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.4vw; /* 20px converted to vw */
+}
+
+.social_media_links .fa {
+    font-weight: 100;
+}
+
+/* footer css close */
