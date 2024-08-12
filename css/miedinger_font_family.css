@@ -19,5 +19,13 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-    src: url('../fonts//Photograph\ Signature.ttf') format('truetype');
+    src: url('../fonts/Photograph Signature.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'montserrat';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url('../fonts/Montserrat-Medium.ttf') format('truetype');
 }
