@@ -298,8 +298,8 @@
     </main>
 
 
-    <footer class="footer bg_green ">
-        <div class="top_11 bg_green">
+    <footer class="footer bg_green pt-md-4">
+        <div class="bg_green">
             <div class=" text-center ">
                 <div class="col-md-12">
                     <img src="images/footer_logo_2.png" alt="azeem dayani footer logo" class="footer_logo">
@@ -361,5 +361,17 @@
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/owl-carousel.js"></script>
     <script type="text/javascript" src="js/bootstrap5.min.js"></script>
+
+    <script>
+        document.querySelector('.menu-trigger').addEventListener('change', function() {
+            if (this.checked) {
+                // Disable scrolling
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Enable scrolling
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 </body>
 </html>

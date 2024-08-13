@@ -176,8 +176,8 @@
         
 
         <section class="non_film_section bg_blue pt-md-5 non_film">
-            <div class="playlist_heading_div position-absolute">
-                <h1 class="playlist_heading font_miedinger text-light">PLAY<span class="">LIST</span></h1>
+            <div class="playlist_heading_div">
+                <h1 class="playlist_heading text-light">PLAY<span class="">LIST</span></h1>
             </div>
             <div class="non_film_music">
                 <div class="row">
@@ -220,7 +220,7 @@
 
     </main>
 
-    <footer class="footer pt_7">
+    <footer class="footer pt_5">
         <div class=" text-center">
             <div class="col-md-12">
                 <img src="images/footer_logo_2.png" alt="azeem dayani footer logo" class="footer_logo">
@@ -279,6 +279,17 @@
     <script type="text/javascript" src="js/owl-carousel.js"></script>
     <script type="text/javascript" src="js/bootstrap5.min.js"></script>
 
+    <script>
+        document.querySelector('.menu-trigger').addEventListener('change', function() {
+            if (this.checked) {
+                // Disable scrolling
+                document.body.style.overflow = 'hidden';
+            } else {
+                // Enable scrolling
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 
 
 </body>

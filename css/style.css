@@ -53,7 +53,7 @@ p {
 }
 
 .bg_green {
-    background-color: #59a246 !important;
+    background-color: #59a246;
 }
 
 .font_miedinger{
@@ -352,11 +352,16 @@ p {
     position: relative;
 }
 
+.middle_description > .row {
+    position: relative;
+    z-index: 1;
+}
+
 .middle_description:before {
     content: "";
     position: absolute;
     /* background-color: skyblue; */
-    z-index: 2;
+    z-index: 0;
     left: 2.4vw;
     top: 6.8vw;
     border: 0.05vw solid #fff;
@@ -369,7 +374,7 @@ p {
     content: "";
     position: absolute;
     /* background-color: skyblue; */
-    z-index: 2;
+    z-index: 0;
     left: 18.2vw;
     top: 13.8vw;
     border: 0.05vw solid #fff;
@@ -387,7 +392,7 @@ p {
     width: 20vw;
     position: relative;
     z-index: 4;
-    right: 8vw;
+    right: 0vw;
 }
 
 #home_page .film_section:before {
@@ -413,6 +418,17 @@ p {
     background-size: 90vw;
 }
 
+.film_music:before {
+    content: "";
+    background: url('../images/Homepage/Music-Lines_3.png') no-repeat right top;
+    display: block;
+    width: 100%;
+    height: 4vw;
+    background-size: 19vw;
+    position: absolute;
+    top: -2vw;
+}
+
 .film_images_main_div {
     right: 3.13vw; /* 6em converted to vw */
     top: 1.56vw; /* 3em converted to vw */
@@ -426,7 +442,7 @@ p {
 
 .film_list li {
     position: relative;
-    height: 3.5vw; /* 3rem converted to vw */
+    height: 3.7vw; /* 3rem converted to vw */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -474,6 +490,15 @@ p {
 
 .playlist_heading_div {
     transform: rotate(-90deg);
+    position: absolute;
+    top: -2vw;
+    left: 1vw;
+    z-index: 0;
+}
+
+.playlist_heading {
+    font-family: 'miedinger', sans-serif;
+    font-size: 5.5vw;
 }
 
 .playlist_heading span {
@@ -504,7 +529,7 @@ p {
     background-size: 18vw;
     position: absolute;
     left: 0;
-    z-index: 999;
+    z-index: 0;
     top: -30vw;
 }
 
@@ -512,12 +537,12 @@ p {
     content: "";
     position: absolute;
     /* background-color: skyblue; */
-    z-index: 2;
-    left: -6.6vw;
-    top: 39vw;
-    border: 0.05vw solid #fff;
-    height: 78.8vw;
-    width: 79.2vw; /* 1038px converted to vw */
+    z-index: 1;
+    left: 0.4vw;
+    top: 51vw;
+    border: 0.05vw solid #ffffffa2;
+    height: 74.8vw;
+    width: 74.8vw; /* 1038px converted to vw */
     border-radius: 100%;
 }
 
@@ -525,14 +550,22 @@ p {
     content: "";
     position: absolute;
     /* background-color: skyblue; */
-    z-index: 2;
-    left: 10.2vw;
-    top: 54vw;
-    border: 0.05vw solid #fff;
-    height: 73.4vw;
-    width: 73.4vw; /* 1038px converted to vw */
+    z-index: 1;
+    left: 13.2vw;
+    top: 63vw;
+    border: 0.05vw solid #ffffffa2;
+    height: 70.4vw;
+    width: 70.4vw; /* 1038px converted to vw */
     border-radius: 100%;
 }
+
+.non_film_section .tshirt_img {
+    width: 18vw;
+    position: relative;
+    z-index: 4;
+    right: 10vw;
+}
+
 
 
 /* home page css close */
@@ -544,6 +577,10 @@ p {
 .about_azeem_dayani {
     padding: 7vw 0 2vw;
     position: relative;
+}
+
+#about_us_page .bg_green {
+    background-color: #5aa236;
 }
 
 .music_director_composer_main_div {
@@ -571,14 +608,19 @@ p {
     background-size: 100%;
     position: absolute;
     z-index: 0;
-    height: 47%;
+    height: 90%;
     display: block;
     bottom: 0vw;
 }
 
 .azeem_big_photo {
-    width: 82%;
+    width: 80%;
     float: right;
+    position: relative;
+    z-index: 1;
+}
+
+.about_main_div {
     position: relative;
     z-index: 1;
 }
@@ -613,6 +655,10 @@ p {
     position: relative;
 }
 
+.about_azeem_dayani_para {
+    text-align: justify;
+}
+
 .azeem_goggle_img {
     float: right;
 }
@@ -636,6 +682,7 @@ p {
     height: auto;
     background-size: 50%;
     position: relative;
+    z-index: 1;
 }
 
 .the_journey_main_div:before {
@@ -645,7 +692,7 @@ p {
     z-index: 0;
     left: -7vw;
     top: 2.8vw;
-    border: 0.05vw solid #fff;
+    border: 0.05vw solid #ffffff80;
     height: 75vw;
     width: 75vw; /* 1038px converted to vw */
     border-radius: 100%;
@@ -658,10 +705,15 @@ p {
     z-index: 0;
     left: 8.2vw;
     top: 8.8vw;
-    border: 0.05vw solid #fff;
+    border: 0.05vw solid #ffffff80;
     height: 71.4vw;
     width: 71.4vw; /* 1038px converted to vw */
     border-radius: 100%;
+}
+
+.the_journey_div {
+    position: relative;
+    z-index: 1;
 }
 
 .the_journey_heading {
@@ -682,6 +734,8 @@ p {
 .cutting_headphone {
     width: 25%;
     margin-left: 5vw;
+    position: relative;
+    z-index: 1;
 }
 
 .vision_main_section {
@@ -730,7 +784,7 @@ p {
 #about_us_page .vision_heading{
     transform: rotate(-90deg);
     position: absolute;
-    top: 18vw;
+    top: 17vw;
     left: 9vw;
     font-size: 6vw;
 }
@@ -740,7 +794,7 @@ p {
 }
 
 .vision_main_image {
-    width: 100%;
+    width: 95%;
 }
 
 
@@ -755,7 +809,7 @@ p {
     z-index: -1;
     left: -10vw;
     top: 23.8vw;
-    border: 0.05vw solid #fff;
+    border: 0.05vw solid #ffffff80;
     height: 79vw;
     width: 81vw; /* 1038px converted to vw */
     border-radius: 100%;
@@ -768,7 +822,7 @@ p {
     z-index: -1;
     left: 15.2vw;
     top: 33.8vw;
-    border: 0.05vw solid #fff;
+    border: 0.05vw solid #ffffff80;
     height: 71.4vw;
     width: 71.4vw; /* 1038px converted to vw */
     border-radius: 100%;
@@ -982,12 +1036,34 @@ footer .top_11 {
 }
 
 .works_section .section_description  {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
 }
 
 .film_row, .non_film_row {
     padding: 1vw 6vw;
 }
+
+.film_row {
+    position: relative;
+}
+
+.film_row:before{
+    content: "";
+    background: url('../images/Work/Object_3.png') no-repeat;
+    display: block;
+    width: 100%;
+    height: 70%;
+    background-size: 80vw;
+    position: absolute;
+    background-repeat: space;
+}
+
+.film_row:before {
+    background-position:  top center; 
+    top: 20vw;
+    left: 0vw;
+}
+
 
 .category_title {
     color: #fff;
@@ -1005,8 +1081,8 @@ footer .top_11 {
 
 .category_title:before, .category_title:after {
     content: "";
-    background-size: 28vw !important;
-    width: 30%;
+    background-size: 25vw !important;
+    width: 31%;
     height: 3vw;
     display: block;
     position: absolute;
@@ -1116,6 +1192,7 @@ h3.category_title.non_film {
     padding: 0.8vw 1.5vw;
     color: #fff;
     font-size: 1.3vw;
+    font-family: 'montserrat';
 }
 
 .contact_form textarea.form-control {
@@ -1183,6 +1260,7 @@ h3.category_title.non_film {
     gap: 1vw;
     font-size: 1.3vw;
     font-weight: 500;
+    font-family: 'montserrat';
 }
 
 /* contact us page css close */
@@ -1238,8 +1316,8 @@ footer {
     background-color: #218ee3;
 }
 
-.footer.pt_7 {
-    padding-top: 7vw;
+.footer.pt_5 {
+    padding-top: 5vw;
 }
 
 .footer_logo {

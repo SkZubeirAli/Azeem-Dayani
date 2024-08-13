@@ -26,6 +26,10 @@
   animation: overlay-mask 125ms ease-out forwards;
 }
 
+.menu-trigger:checked ~ body {
+  overflow: hidden;
+}
+
 @keyframes overlay-mask {
   0% {
     background-image: radial-gradient(circle at calc(100vw - 55px) 50px, rgba(0, 0, 0, 0.5) 0%, transparent 0%);

@@ -160,6 +160,18 @@
 
     </script>
 
+<script>
+    document.querySelector('.menu-trigger').addEventListener('change', function() {
+        if (this.checked) {
+            // Disable scrolling
+            document.body.style.overflow = 'hidden';
+        } else {
+            // Enable scrolling
+            document.body.style.overflow = 'auto';
+        }
+    });
+</script>
+
     
 </body>
 </html>
